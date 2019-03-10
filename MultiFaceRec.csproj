@@ -51,13 +51,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Emgu.CV">
-      <HintPath>F:\Emgu\emgucv-windows-x86 2.2.1.1150\bin\Emgu.CV.dll</HintPath>
+      <HintPath>..\..\..\Desktop\TPJ\New folder\FaceRecProOV\bin\Debug\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.GPU">
+      <HintPath>..\..\..\Desktop\TPJ\New folder\FaceRecProOV\bin\Debug\Emgu.CV.GPU.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.ML">
+      <HintPath>..\..\..\Desktop\TPJ\New folder\FaceRecProOV\bin\Debug\Emgu.CV.ML.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.UI">
-      <HintPath>F:\Emgu\emgucv-windows-x86 2.2.1.1150\bin\Emgu.CV.UI.dll</HintPath>
+      <HintPath>..\..\..\Desktop\TPJ\New folder\FaceRecProOV\bin\Debug\Emgu.CV.UI.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.Util">
-      <HintPath>F:\Emgu\emgucv-windows-x86 2.2.1.1150\bin\Emgu.Util.dll</HintPath>
+      <HintPath>..\..\..\Desktop\TPJ\New folder\FaceRecProOV\bin\Debug\Emgu.Util.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -88,6 +94,12 @@
     <Compile Include="empForm.Designer.cs">
       <DependentUpon>empForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmpForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpForm1.designer.cs">
+      <DependentUpon>EmpForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     <EmbeddedResource Include="CustForm1.resx">
       <DependentUpon>CustForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="empForm.resx">
+      <DependentUpon>empForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpForm1.resx">
+      <DependentUpon>EmpForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +142,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="WelcomeCust.resx">
+      <DependentUpon>WelcomeCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcomeForm.resx">
+      <DependentUpon>welcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -157,7 +181,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Donate.gif" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

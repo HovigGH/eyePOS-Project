@@ -15,5 +15,21 @@ namespace MultiFaceRec
         {
             InitializeComponent();
         }
-    }
+
+		private void btnLogIn_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnClear_Click(object sender, EventArgs e)
+		{
+			txtPassword.Clear();
+			txtUserName.Clear();
+		}
+
+		private void btnHome_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+	}
 }

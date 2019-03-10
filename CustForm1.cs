@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 
 
-namespace eyePOS
+namespace MultiFaceRec
 {
 	public partial class CustForm1 : Form
 	{
@@ -116,5 +116,9 @@ namespace eyePOS
 
 		}
 
+		private void checkOutButton_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

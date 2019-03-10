@@ -1,5 +1,4 @@
-﻿namespace eyePOS
-{
+﻿namespace MultiFaceRec{
 	partial class CustForm1
 	{
 		/// <summary>
@@ -43,7 +42,13 @@
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.label2 = new System.Windows.Forms.Label();
+			this.checkOutButton = new System.Windows.Forms.Button();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.subtotalCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.taxCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.totalCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.cartGrid)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// callhelpButton
@@ -57,9 +62,9 @@
 			// 
 			// totalBox
 			// 
-			this.totalBox.Location = new System.Drawing.Point(403, 570);
+			this.totalBox.Location = new System.Drawing.Point(3, 52);
 			this.totalBox.Name = "totalBox";
-			this.totalBox.Size = new System.Drawing.Size(653, 72);
+			this.totalBox.Size = new System.Drawing.Size(394, 72);
 			this.totalBox.TabIndex = 6;
 			this.totalBox.Text = "Total: 1 dolla";
 			// 
@@ -181,11 +186,67 @@
 			this.label2.TabIndex = 13;
 			this.label2.Text = "(or enter a UPC)";
 			// 
+			// checkOutButton
+			// 
+			this.checkOutButton.Location = new System.Drawing.Point(276, 570);
+			this.checkOutButton.Name = "checkOutButton";
+			this.checkOutButton.Size = new System.Drawing.Size(121, 72);
+			this.checkOutButton.TabIndex = 14;
+			this.checkOutButton.Text = "Check Out";
+			this.checkOutButton.UseVisualStyleBackColor = true;
+			this.checkOutButton.Click += new System.EventHandler(this.checkOutButton_Click);
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.AllowUserToAddRows = false;
+			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.AllowUserToResizeColumns = false;
+			this.dataGridView1.AllowUserToResizeRows = false;
+			this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.subtotalCol,
+            this.taxCol,
+            this.totalCol});
+			this.dataGridView1.Location = new System.Drawing.Point(403, 570);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.RowHeadersVisible = false;
+			this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.dataGridView1.Size = new System.Drawing.Size(653, 72);
+			this.dataGridView1.TabIndex = 15;
+			// 
+			// subtotalCol
+			// 
+			this.subtotalCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.subtotalCol.Frozen = true;
+			this.subtotalCol.HeaderText = "Subtotal";
+			this.subtotalCol.Name = "subtotalCol";
+			this.subtotalCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.subtotalCol.Width = 200;
+			// 
+			// taxCol
+			// 
+			this.taxCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.taxCol.HeaderText = "Tax @ 15%";
+			this.taxCol.Name = "taxCol";
+			this.taxCol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.taxCol.Width = 200;
+			// 
+			// totalCol
+			// 
+			this.totalCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.totalCol.HeaderText = "Total";
+			this.totalCol.Name = "totalCol";
+			this.totalCol.ReadOnly = true;
+			this.totalCol.Width = 200;
+			// 
 			// CustForm1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1068, 651);
+			this.Controls.Add(this.dataGridView1);
+			this.Controls.Add(this.checkOutButton);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.barcodeInputTextbox);
 			this.Controls.Add(this.cartGrid);
@@ -197,6 +258,7 @@
 			this.Load += new System.EventHandler(this.CustForm1_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CustForm1_KeyDown_1);
 			((System.ComponentModel.ISupportInitialize)(this.cartGrid)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -218,5 +280,10 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn itemCol;
 		private System.Windows.Forms.DataGridViewTextBoxColumn priceCol;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button checkOutButton;
+		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn subtotalCol;
+		private System.Windows.Forms.DataGridViewTextBoxColumn taxCol;
+		private System.Windows.Forms.DataGridViewTextBoxColumn totalCol;
 	}
 }

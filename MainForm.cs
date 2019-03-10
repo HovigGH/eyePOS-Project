@@ -60,8 +60,16 @@ namespace MultiFaceRec
             }
 
         }
+		private void gotCustomer() //RM
+		{
+			CustForm1 scanning = new CustForm1();
 
-        private void detect_reocgnize()
+			this.Hide();
+
+			scanning.ShowDialog();
+			this.Close();
+		}
+		private void detect_reocgnize()
         {
             //Initialize the capture device
             grabber = new Capture();
@@ -227,11 +235,6 @@ namespace MultiFaceRec
                     NamePersons.Clear();
 
                 }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-           // Process.Start("Donate.html");
-        }
 
     }
 }

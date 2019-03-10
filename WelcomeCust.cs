@@ -15,5 +15,29 @@ namespace MultiFaceRec
         {
             InitializeComponent();
         }
-    }
+
+		private void startScanning()
+		{
+			CustForm1 scanning = new CustForm1();
+
+			this.Hide();
+
+			scanning.ShowDialog();
+			this.Close();
+		}
+
+		private void btnNew_Click(object sender, EventArgs e)
+		{
+			//go to new cust menu
+			startScanning();
+
+		}
+
+		private void btnExist_Click(object sender, EventArgs e)
+		{
+			//do old cust things
+			startScanning();
+
+		}
+	}
 }
