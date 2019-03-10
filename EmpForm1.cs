@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MultiFaceRec
@@ -33,6 +32,11 @@ namespace MultiFaceRec
 		}
 
 		private void EmpForm1_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void userButton_Click(object sender, EventArgs e)
 		{
 
 		}

@@ -36,6 +36,7 @@
 			this.addInvButton = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.refreshInvButton = new System.Windows.Forms.Button();
+			this.userButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.invGV)).BeginInit();
 			this.searchGB.SuspendLayout();
 			this.SuspendLayout();
@@ -107,7 +108,7 @@
 			// 
 			// refreshInvButton
 			// 
-			this.refreshInvButton.Location = new System.Drawing.Point(487, 427);
+			this.refreshInvButton.Location = new System.Drawing.Point(493, 427);
 			this.refreshInvButton.Name = "refreshInvButton";
 			this.refreshInvButton.Size = new System.Drawing.Size(82, 64);
 			this.refreshInvButton.TabIndex = 10;
@@ -115,11 +116,22 @@
 			this.refreshInvButton.UseVisualStyleBackColor = true;
 			this.refreshInvButton.Click += new System.EventHandler(this.refreshInvButton_Click);
 			// 
+			// userButton
+			// 
+			this.userButton.Location = new System.Drawing.Point(761, 427);
+			this.userButton.Name = "userButton";
+			this.userButton.Size = new System.Drawing.Size(82, 64);
+			this.userButton.TabIndex = 11;
+			this.userButton.Text = "User View";
+			this.userButton.UseVisualStyleBackColor = true;
+			this.userButton.Click += new System.EventHandler(this.userButton_Click);
+			// 
 			// EmpForm1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(848, 651);
+			this.ClientSize = new System.Drawing.Size(848, 498);
+			this.Controls.Add(this.userButton);
 			this.Controls.Add(this.refreshInvButton);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.addInvButton);
@@ -145,5 +157,6 @@
 		private System.Windows.Forms.Button addInvButton;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button refreshInvButton;
+		private System.Windows.Forms.Button userButton;
 	}
 }

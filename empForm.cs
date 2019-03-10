@@ -18,7 +18,12 @@ namespace MultiFaceRec
 
 		private void btnLogIn_Click(object sender, EventArgs e)
 		{
+			// add options for admin and user designation
 
+			EmpForm1 menu = new EmpForm1();
+			this.Hide();
+			menu.ShowDialog();
+			this.Close();
 		}
 
 		private void btnClear_Click(object sender, EventArgs e)

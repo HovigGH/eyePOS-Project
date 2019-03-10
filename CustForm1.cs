@@ -27,13 +27,14 @@ namespace MultiFaceRec
 
 		private void CustForm1_Load(object sender, EventArgs e)
 		{
-
-
 			cartGrid.Columns["deleteCol"].DefaultCellStyle.NullValue = "🗑️"; //Set up the grid
 																			  //Format: Null, int qty, string UPC, string item name, double price
 			barcodeInputTextbox.Select();
 
 			cartGrid.Rows.Add(null, 1, "01052843", "Chocolate Bar", 2.00); //RM testing only
+
+			
+
 		}
 
 
@@ -84,12 +85,18 @@ namespace MultiFaceRec
 		private void updateTotals()
 		{
 			double sum = 0;
+			double tax = 0;
+			double total = 0;
 			foreach (DataGridViewRow r in cartGrid.Rows)
 			{
 				sum += Convert.ToDouble(r.Cells[4].Value) * Convert.ToInt32(r.Cells[1].Value);
 			}
+			tax = (sum * 0.15);
+			total = sum + tax;
 
-			totalBox.Text = sum.ToString();
+			subLabel.Text = "$" + sum.ToString();
+			taxLabel.Text = "$" + tax.ToString();
+			totalLabel.Text = "$" + total.ToString();
 
 		}
 
@@ -117,6 +124,11 @@ namespace MultiFaceRec
 		}
 
 		private void checkOutButton_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void totalBox_TextChanged(object sender, EventArgs e)
 		{
 
 		}
